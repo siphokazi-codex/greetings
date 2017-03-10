@@ -1,0 +1,157 @@
+
+.greeting {
+margin: auto;
+background-color: #eae1e1;
+align-items: center
+text-align: center;
+align-content: center;
+border-radius: 10px;
+width: 50%;
+height: 500px;
+border-style: inset;
+border-color: #821202;
+}
+
+.greet h1 {
+  text-shadow: 0px 2px 4px rgba(34,62,66,.75);
+  color: #821202;
+  font-size: 90px;
+  line-height: 0.5px;
+}
+
+.greet {
+
+margin: 60px 40px 10px 50px;
+height: 80px;
+line-height: 0.5px;
+}
+
+.name {
+  border-color: #013a21;
+  border-style: inset;;
+  border-radius: 10px;
+  width: 80%;
+  height: 43%;
+  margin-top: -20px;
+  margin-left: 10%;
+  padding-left: 2%;
+}
+
+#name label {
+color: #821202;
+font-size: 30px;
+margin-right: 10px;
+
+}
+
+#name input{
+width: 250px;
+color: #605c5c;
+font-size: 30px;
+margin-right: 10px;
+}
+
+.myBtn {
+  background-color: #720202;
+  width: 120px;
+  height: 40px;
+  color: #e2d7d7;
+  font-size: 20px;
+  border-radius: 10px;
+  text-shadow: 0px 2px 4px rgba(34,62,66,.75);
+  margin-left:45px;
+  margin-right: 20px;
+}
+
+.myClear{
+  background-color: #013a21;
+  width: 120px;
+  height: 40px;
+  color: #e2d7d7;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+  text-shadow: 0px 2px 4px rgba(34,62,66,.75);
+}
+
+.myReset {
+  background-color: #720202;
+  height: 40px;
+  color: #e2d7d7;
+  font-size: 17px;
+  border-radius: 10px;
+  text-shadow: 0px 2px 4px rgba(34,62,66,.75);
+}
+
+.hello {
+  color: #720202;
+  font-size: 20px;
+  margin-top: -40px;
+  height: 15%;
+  margin-left: 50px;
+}
+
+.hello label {
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+.hello textarea {
+  color: #720202;
+  font-size: 50px;
+}
+
+.hello ul {
+  width: 500px;
+  height: 60px;
+  font-size: 60px;
+}
+
+#language {
+  color: ;
+  font-size: 10px;
+  font-style: oblique;
+
+}
+
+.english {
+padding-left: 10px;
+}
+
+.radioButtons {
+  border-style: inset;;
+  border-radius: 1px;
+  width: 520px;
+  height: 42%;
+  margin-left: -12px;
+}
+
+.myText {
+  border-radius: 10px;
+}
+
+#language {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.radioButtons {
+ color: #013a21;
+}
+
+.radioButtons label {
+margin-right: 20px;
+font-size: 20px;
+font-weight: bold;
+}
+
+.buttons {
+margin-top: 5px;
+}
+
+.display {
+  color: #013a21;
+  font-size: 40px;
+  margin-left: 100px;
+  font-weight: bold;
+}
