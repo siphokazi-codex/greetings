@@ -83,7 +83,7 @@ margin-right: 10px;
   text-shadow: 0px 2px 4px rgba(34,62,66,.75);
 }
 
-.hello {
+.helloGreeting {
   color: #720202;
   font-size: 20px;
   margin-top: -40px;
@@ -91,17 +91,17 @@ margin-right: 10px;
   margin-left: 50px;
 }
 
-.hello label {
+.helloGreeting label {
   margin-top: 30px;
   font-size: 40px;
 }
 
-.hello textarea {
+.helloGreeting textarea {
   color: #720202;
   font-size: 50px;
 }
 
-.hello ul {
+.helloGreeting ul {
   width: 500px;
   height: 60px;
   font-size: 60px;
