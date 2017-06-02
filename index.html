@@ -14,17 +14,15 @@
 <div class="name">
   <div class="language">
     <p id="name">
-     <label>Name</label>
-     <input type = "text"
-            class = "textboxName"/>
+     <label>Name</label><input type="text" class ="textboxName"/>
     </p>
   </div>
 
   <div class="radioButtons">
    <p id="language">Please select preferred language</p>
-   <label class="radioEnglish"><input type="radio" name="languages" value="Hello " checked>English</label>
-   <label class="radioFrench"><input type="radio" name="languages" value="Bonjour ">French</label>
-   <label class="radioTshivenda"><input type="radio" name="languages" value="Ndaa ">Tshivenda</label>
+   <label class="radioEnglish"><input type="radio" name="languages" id="English" checked>English</label>
+   <label class="radioFrench"><input type="radio" name="languages" id="French">French</label>
+   <label class="radioTshivenda"><input type="radio" name="languages" id="Tshivenda">Tshivenda</label>
   </div>
 
   <div class="buttons">
@@ -33,13 +31,12 @@
    <button class="resetButton">Reset Counter</button>
   </div>
 </div>
-  <div class="helloGreeting">
-    <ul class="nameList"></ul>
-  </div>
+  <div class="nameList"></div>
 
   <div class="displayCntr">Greetings counter</div>
 </div>
     <script src="greetings.js"></script>
+    <script src="getMessage.js"></script>
   </body>
 
 </html>

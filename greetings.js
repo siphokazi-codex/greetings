@@ -16,10 +16,20 @@ var tshivendaRadio = document.querySelector('.radioTshivenda');
 //Obtaining value from name text value
 var nameValue = nameTxt.value;
 
+//This function gets value from the name textbox.
+function getName(){
+
+  if(nameValue < 0){
+    helloList.innerHTML = "Please input name to be greeted on above textbox";
+  }
+  else {
+    return nameValue;
+  }
+}
+
 //This function stores the counter variable on the local Storage and display it on the web page
 function storeValues() {
-  //Calling the calculate counter function
-  calculateCounter();
+
 
   if (localStorage.counter === undefined) {
       localStorage.setItem('counter', 0);
@@ -33,39 +43,38 @@ function storeValues() {
     counterdisplay.innerHTML = localStorage.counter;
 }
 
-/*This function takes an input name and greets a person with a different language, depending on radio button selected.
-  Display the input name and language greeted on the web page*/
-function getRadioButtonValue() {
-    //Calling the input name function
-    //getInputName();
+/*This function takes the radio button selected and take the
+radio button language, depending on radio button selected.*/
+function getLanguage() {
 
-    //Get the radio button value
-    var hello = document.querySelector("input[name = 'languages']:checked");
-    var greetValue = hello.value;
-    nameTxt.value = '';
+    if (document.getElementById("English").checked === true) {
+      return "English"
+    }
+    else if (document.getElementById("French").checked === true) {
+      return "French"
+    }
+    else if (document.getElementById("Tshivenda").checked === true) {
+      return "Tshivenda"
+    }
 }
 
-function getInputName() {
-  //Calling the radio button function
-  getRadioButtonValue();
+/*This function takes the getName and getLanguage function pass these two functions
+ as parameters and pass the values to the greet button event listener*/
+ var greet =  function(nameValue){
+   var myGreeting = getMessage(getName(), getLanguage());
+    helloList.innerHTML = myGreeting;
+ }
 
-  if (nameValue.length > 0) {
-    //takes the radio button value and concatenates it with the input text box value.
-    helloList.innerHTML = greetValue + (nameValue.substr(0,1).toUpperCase() + nameValue.substr(1).toLowerCase());
-  }
-};
-
-//This function calculates how many times a unique name has been greeted
+//This function uniquely calculates how many times a unique name has been greeted
 function calculateCounter() {
-  //Calling the input name function
-  getInputName();
 
-  var greeting = JSON.parse(localStorage.getItem('greeting'));
-  if (greeting[nameValue] === undefined && nameValue.length > 0) {
-    greeting[nameValue] = 1;
-    localStorage.counter ++;
-    counterdisplay.innerHTML = localStorage.counter;
-    localStorage.setItem('greeting', JSON.stringify(greeting));
+  //var greeting = JSON.parse(localStorage.getItem('greeting'));
+  if (nameValue === undefined && nameValue.length > 0) {
+    nameValue = 1;
+    counter ++;
+    //localStorage.counter ++;
+    counterdisplay.innerHTML = counter;
+    //localStorage.setItem('greeting', JSON.stringify(greeting));
   }
 };
 
@@ -78,6 +87,6 @@ function resetCounter () {
     counterdisplay.innerHTML = localStorage.counter;
 }
 
-greetBtn.addEventListener('click', getInputName);
+greetBtn.addEventListener('click', greet);
 clearBtn.addEventListener('click', clearField);
 resetBtn.addEventListener('click', resetCounter);
